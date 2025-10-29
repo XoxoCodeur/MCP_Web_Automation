@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/mcp_web_automation.egg-info/PKG-INFO
+src/mcp_web_automation.egg-info/SOURCES.txt
+src/mcp_web_automation.egg-info/dependency_links.txt
+src/mcp_web_automation.egg-info/entry_points.txt
+src/mcp_web_automation.egg-info/requires.txt
+src/mcp_web_automation.egg-info/top_level.txt

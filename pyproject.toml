@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-web-automation"
+version = "0.1.0"
+description = "MCP stdio server exposing Playwright-backed web automation tools."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Automation Team" }
+]
+dependencies = [
+  "playwright>=1.44.0",
+  "pydantic>=2.7.0"
+]
+
+[project.optional-dependencies]
+perf = ["orjson>=3.10.0"]
+
+[project.scripts]
+mcp-web-automation = "src.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

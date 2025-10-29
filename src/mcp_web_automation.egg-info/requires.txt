@@ -1,0 +1,5 @@
+playwright>=1.44.0
+pydantic>=2.7.0
+
+[perf]
+orjson>=3.10.0
