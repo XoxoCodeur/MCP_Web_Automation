@@ -42,7 +42,7 @@ L’objectif est d’avoir une plateforme **rapide (< 2 s pour l’ACK)**, **sca
 
 - **API** : timeout de requête **2 s** pour l’ACK ; validation du schéma en entrée.  
 - **File d’attente** : **3 tentatives** de reprise par job, **backoff exponentiel**.  
-- **Autoscaling** : déclenchement si **file > 10 messages/pod** ; **max 50–100 pods** selon budget.  
+- **Autoscaling** : déclenchement si **file > 10 messages/pod** création de nouveaux pods pour tenir la charge.  
 - **Rétention** : résultats JSON **30–90 jours** (RGPD) ; logs **180 jours** (audit).  
 - **Sécurité** : **TLS partout**.  
 - **Haute disponibilité** : **multi‑zones** (et option **multi‑région**) pour viser **~99,9 %**.  
