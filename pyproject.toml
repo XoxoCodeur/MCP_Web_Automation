@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mcp-web-automation"
-version = "0.1.0"
-description = "MCP stdio server exposing Playwright-backed web automation tools."
+version = "0.2.0"
+description = "MCP stdio server with Playwright tools + LLM-powered intelligent scraping agent."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -14,7 +14,8 @@ authors = [
 ]
 dependencies = [
   "playwright>=1.44.0",
-  "pydantic>=2.7.0"
+  "pydantic>=2.7.0",
+  "openai>=1.0.0"
 ]
 
 [project.optional-dependencies]
@@ -22,6 +23,7 @@ perf = ["orjson>=3.10.0"]
 
 [project.scripts]
 mcp-web-automation = "src.mcp_server:main"
+mcp-scraping-agent = "src.scraping_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

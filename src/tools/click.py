@@ -28,6 +28,13 @@ def build_click(manager: BrowserManager) -> ToolDefinition:
             raise ToolError(ErrorCode.ELEMENT_NOT_FOUND, f"No element matches selector '{data.selector}'.")
 
         target = element.first
+
+        # Scroll element into view before checking visibility
+        try:
+            target.scroll_into_view_if_needed(timeout=2_000)
+        except (PlaywrightTimeoutError, PlaywrightError):
+            pass  # Continue even if scroll fails
+
         try:
             target.wait_for(state="visible", timeout=5_000)
         except PlaywrightTimeoutError as exc:
